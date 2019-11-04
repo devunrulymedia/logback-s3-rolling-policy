@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-mvn release:prepare release:perform && git push
+mvn release:clean release:prepare release:perform && git push

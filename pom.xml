@@ -180,7 +180,7 @@
                     <encoding>UTF-8</encoding>
                     <optimize>true</optimize>
                     <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
+                    <showDeprecation>false</showDeprecation>
                 </configuration>
                 <inherited>true</inherited>
             </plugin>
