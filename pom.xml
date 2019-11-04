@@ -4,15 +4,28 @@
     <!-- PROJECT METADATA -->
     <groupId>ch.qos.logback</groupId>
     <artifactId>logback-s3-rolling-policy</artifactId>
-    <version>GIT-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <!-- CODE MANAGEMENT -->
     <scm>
+        <connection>scm:git:git@github.com:devunrulymedia/logback-s3-rolling-policy.git</connection>
+        <developerConnection>scm:git:git@github.com:devunrulymedia/logback-s3-rolling-policy.git</developerConnection>
         <tag>HEAD</tag>
-        <url>https://git@github.com/link-nv/logback-s3</url>
-        <connection>scm:git:ssh://git@github.com/link-nv/logback-s3</connection>
-        <developerConnection>scm:git:ssh://git@github.com/link-nv/logback-s3</developerConnection>
+        <url>https://github.com/devunrulymedia/logback-s3-rolling-policy</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>unrulymedia</id>
+            <name>ext-releases-local</name>
+            <url>https://unrulymedia.jfrog.io/unrulymedia/ext-releases-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>unrulymedia</id>
+            <name>ext-snapshots-local</name>
+            <url>https://unrulymedia.jfrog.io/unrulymedia/ext-snapshots-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <reporting>
         <outputDirectory>target/site</outputDirectory>
@@ -43,10 +56,10 @@
         <maven-javadoc-plugin.version>2.8.1</maven-javadoc-plugin.version>
         <maven-source-plugin.version>2.0.4</maven-source-plugin.version>
 
-        <aws-java-sdk.version>1.11.293</aws-java-sdk.version>
-        <logback.version>1.2.3</logback.version>
+        <aws-java-sdk.version>1.11.98</aws-java-sdk.version>
+        <logback.version>1.2.2</logback.version>
         <javax-servlet.version>2.4</javax-servlet.version>
-        <google-guava.version>18.0</google-guava.version>
+        <google-guava.version>23.6-jre</google-guava.version>
         <jetbrains-annotations.version>15.0</jetbrains-annotations.version>
 
     </properties>
@@ -276,7 +289,7 @@
 
         <dependency>
             <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk</artifactId>
+            <artifactId>aws-java-sdk-s3</artifactId>
             <version>${aws-java-sdk.version}</version>
         </dependency>
 
